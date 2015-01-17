@@ -1,6 +1,6 @@
 var restify = require('restify');
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://localhost:27017/LIMS', ['FreightDetails']);
+var db = mongojs('mongodb://localhost:27017/deviceem', ['FreightDetails']);
 
 
 // Server
