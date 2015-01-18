@@ -26,10 +26,6 @@ server.get("/devices", function (req, res, next) {
 
 server.post('/device', function (req, res, next) {
     var device = req.params;
-    db.products.save(device,
-        function (err, data) {
-           
-            res.end(JSON.stringify(data));
-        });
+    db.products.save(device);
     return next();
 });
