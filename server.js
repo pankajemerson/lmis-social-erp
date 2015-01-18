@@ -28,9 +28,7 @@ server.post('/device', function (req, res, next) {
     var device = req.params;
     db.products.save(device,
         function (err, data) {
-            res.writeHead(200, {
-                'Content-Type': 'application/json; charset=utf-8'
-            });
+           
             res.end(JSON.stringify(data));
         });
     return next();
