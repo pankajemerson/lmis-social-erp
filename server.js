@@ -16,7 +16,7 @@ server.listen(3000, function () {
 
 //Query like http://IP_ADDRESS:3000/freights?truckNumber=HR74-4967
 server.get("/freights", function (req, res, next) {	
-	if[req.params.truckNumber]{
+	if(req.params.truckNumber){
 		db.FreightDetails.find({truckNumber:req.params.truckNumber},function (err, symbols) {
 	               res.end(JSON.stringify(symbols));
 	    	});
